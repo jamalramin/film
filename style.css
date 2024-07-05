@@ -1,0 +1,71 @@
+body {
+    font-family: poppins;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+
+.container header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1% 5%;
+}
+
+.container header img{
+    height: 100px;
+    width: 180px;
+}
+
+.container header section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container header section a{
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.container .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 30px;    
+    width: 15%;
+    border: 1px solid black;
+}
+
+.container .search input {
+    padding:0 10px;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.container .search input::focus {
+    border: 1px solid red;
+}
+
+.container .search ion-icon {
+    font-size: 30px;
+}
+
+.container header .sign button:first-child{
+    background-color: #006ff9;
+    color: white;
+    border: none;
+}
+
+.container header .sign button{
+    padding: 10px 20px;
+    margin:0 10px ;
+    border-radius: 5px;
+    background-color: gray;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
