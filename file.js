@@ -1,5 +1,4 @@
-function call() {
-    
-    try{alert('how are you man');}
-    catch{'there is something wrong'}
+function showAni(){
+    document.querySelector("body").style.backgroundColor = "rgb(218, 210, 210)";
+    document.getElementById('animation').style.display = "flex";
 }

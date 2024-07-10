@@ -13,8 +13,10 @@ body {
 }
 
 .container header img{
-    height: 100px;
-    width: 180px;
+    height: 60px;
+    width: 80px;
+  mix-blend-mode: multiply;
+
 }
 
 .container header section{
@@ -23,19 +25,29 @@ body {
 }
 
 .container header section a{
-    margin: 0 10px;
+    margin: 0 14px;
     text-decoration: none;
     color: black;
     font-size: 17px;
+    border-width: 0%;
+    transition-duration: 0.5s;
+    border: 2px solid transparent;
+}
+
+
+.container header section a:hover{
+    /* border-bottom: 2px solid black; */
+    transform: scale(1.05);
 }
 
 .container .search {
+    padding: 5px 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 20px;
     height: 30px;    
-    width: 15%;
+    width: 20%;
     border: 1px solid black;
 }
 
@@ -44,20 +56,27 @@ body {
     width: 100%;
     height: 100%;
     border: none;
+    font-size: 16px;
+    background-color: transparent;
 }
 
-.container .search input::focus {
-    border: 1px solid red;
+.container .search input:focus{
+    outline: none;
 }
+
 
 .container .search ion-icon {
     font-size: 30px;
 }
 
 .container header .sign button:first-child{
-    background-color: #006ff9;
+    background-color: #0073ff;
     color: white;
     border: none;
+}
+
+.container header .sign button:first-child:hover{
+    background-color: #0e6bdb;
 }
 
 .container header .sign button{
@@ -67,5 +86,67 @@ body {
     background-color: gray;
     border: none;
     color: white;
+    transition-duration: 0.5s;
     font-size: 16px;
+}
+
+.container header .sign button:hover{
+    background-color: rgb(99, 99, 99);
+}
+
+/* HTML: <div class="loader"></div> */
+
+#animation {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height:500px;
+}
+
+.lds-facebook,
+.lds-facebook div {
+  box-sizing: border-box;
+}
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 10px;
+  background: currentColor;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0s;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+/* this part belongs to the resposive section  */
+@media only screen and (max-width: 600px){
+  .container header section {
+    display: none;
+  }
 }
